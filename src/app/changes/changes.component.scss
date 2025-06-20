@@ -1,0 +1,178 @@
+.changes-section {
+  background: linear-gradient(135deg, #f8fafc 60%, #ffd9dc 100%);
+  border-radius: 2.2rem;
+  box-shadow: 0 8px 32px rgba(30, 41, 59, 0.10), 0 2px 12px rgba(0, 0, 106, 0.08);
+  padding: 3.5rem 2.5rem 3rem 2.5rem;
+  margin: 2.5rem auto 2.5rem auto;
+  max-width: 1600px;
+}
+
+.changes-title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #111;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 2.2rem;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  text-shadow: 0 2px 8px rgba(0,0,106,0.07);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  background: linear-gradient(90deg, #ffd9dc 60%, #fff 100%);
+  padding: 1.1rem 2.2rem 1.1rem 1.7rem;
+  border-radius: 1.2rem 2.5rem 2.5rem 0.7rem;
+  box-shadow: 0 2px 16px rgba(182,182,255,0.10);
+  width: fit-content;
+  min-width: 320px;
+  max-width: 90vw;
+}
+
+.changes-title::before {
+  content: '\201C';
+  font-size: 3.5rem;
+  color: #ff6f91;
+  font-family: serif;
+  opacity: 0.7;
+  margin-right: 0.5rem;
+  margin-left: -0.7rem;
+  vertical-align: middle;
+}
+
+.changes-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: #ff6f91;
+  border-radius: 3px;
+  margin-left: 1.2rem;
+  opacity: 0.7;
+  margin-top: 0.7rem;
+}
+
+.changes-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+  box-shadow: 0 4px 24px rgba(30, 41, 59, 0.08);
+  border-radius: 1.5rem;
+  background: rgba(255,255,255,0.95);
+  padding: 2rem 1.2rem;
+}
+
+.change-card {
+  background: #fff;
+  border-radius: 1.3rem;
+  box-shadow: 0 6px 24px rgba(30, 41, 59, 0.16), 0 2px 10px rgba(0, 0, 106, 0.13);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem 1rem 1.7rem 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: fadeInUp 1.1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.change-card:hover {
+  transform: scale(1.045) rotate(1deg);
+  box-shadow: 0 12px 36px rgba(0,0,106,0.18);
+  z-index: 2;
+}
+
+.change-img {
+  width: 100%;
+  min-height: 320px;
+  max-height: 480px;
+  border-radius: 1.3rem;
+  object-fit: cover;
+  margin-bottom: 0;
+  background: #f8fafc;
+  box-shadow: 0 2px 8px rgba(0,0,106,0.07);
+}
+
+.change-caption {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0a3;
+  text-align: center;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .changes-section {
+    padding: 1.5rem 0.5rem 1.2rem 0.5rem;
+  }
+  .changes-title {
+    font-size: 2.1rem;
+  }
+  .changes-gallery {
+    max-width: 700px;
+    gap: 1rem;
+    padding: 0.7rem 0.2rem;
+  }
+  .change-card {
+    padding: 0.7rem 0.5rem 1rem 0.5rem;
+  }
+  .change-img {
+    min-height: 200px;
+    max-height: 320px;
+  }
+}
+
+@media (max-width: 700px) {
+  .changes-section {
+    padding: 0.7rem 0.1rem 0.4rem 0.1rem;
+    margin: 0.5rem auto 0.5rem auto;
+  }
+  .changes-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.1rem;
+    padding: 0.7rem 1.1rem 0.7rem 0.7rem;
+    min-width: 160px;
+  }
+  .changes-title::before {
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+  }
+  .changes-gallery {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+    max-width: 98vw;
+    padding: 0.2rem 0.1rem;
+    border-radius: 0.7rem;
+  }
+  .change-card {
+    padding: 0.4rem 0.2rem 0.7rem 0.2rem;
+  }
+  .change-img {
+    min-height: 120px;
+    max-height: 180px;
+    border-radius: 0.7rem;
+  }
+  .change-caption {
+    font-size: 1rem;
+  }
+}

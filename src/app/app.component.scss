@@ -2,3 +2,37 @@
     margin: 0;
     padding: 0;
 }
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1000;
+  width: 72px;
+  height: 72px;
+  background: #fff;
+  color: #e75480;
+  border: 2.5px solid #e75480;
+  border-radius: 50%;
+  box-shadow: 0 6px 24px rgba(106,0,0,0.10), 0 2px 8px rgba(30, 41, 59, 0.08);
+  cursor: pointer;
+  font-size: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, transform 0.2s, border-color 0.2s;
+  outline: none;
+  opacity: 0.96;
+}
+.scroll-to-top svg {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+.scroll-to-top:hover {
+  background: linear-gradient(135deg, #e75480 80%, #ffb6c1 100%);
+  color: #fff;
+  transform: scale(1.12) translateY(-6px);
+  opacity: 1;
+  border-color: #fff;
+}

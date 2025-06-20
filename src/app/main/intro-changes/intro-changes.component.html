@@ -1,0 +1,21 @@
+<div class="intro-changes-carousel">
+  <h2 class="intro-changes-title">Transformaciones Reales de Mis Asesoradas</h2>
+  <div class="intro-changes-carousel-inner">
+    <button type="button" class="carousel-arrow left" (click)="prev()" aria-label="Anterior">
+      &#10094;
+    </button>
+    <div class="carousel-images">
+      <div class="carousel-image-card" *ngFor="let img of visibleImages" (click)="goToChanges()" style="cursor:pointer;">
+        <img [src]="img" alt="Cambio de asesorada" class="carousel-image" />
+      </div>
+    </div>
+    <button type="button" class="carousel-arrow right" (click)="next()" aria-label="Siguiente">
+      &#10095;
+    </button>
+  </div>
+  <div class="intro-changes-desc">
+    <p>
+      Descubre algunos de los increíbles cambios que han logrado mis asesoradas al confiar en mi acompañamiento personalizado. ¡Tú también puedes transformar tu cuerpo y tu confianza!
+    </p>
+  </div>
+</div>
