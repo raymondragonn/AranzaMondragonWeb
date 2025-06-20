@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <div class="navbar__brand">Aranza Mondragón</div>
+  <div class="navbar__subtitle">Entrenadora Personal</div>
+  <button class="navbar__toggle" (click)="menuAbierto = !menuAbierto" aria-label="Abrir menú" *ngIf="esMovil" [class.abierto]="menuAbierto">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="navbar__links" [class.abierto]="menuAbierto || !esMovil">
+    <li><a href="#" (click)="cerrarMenu()">Inicio</a></li>
+    <li><a href="#" (click)="cerrarMenu()">Asesoría</a></li>
+    <li><a href="#" (click)="cerrarMenu()">Testimonios</a></li>
+    <li><a href="#" (click)="cerrarMenu()">Cambios</a></li>
+  </ul>
+</nav>
