@@ -16,12 +16,12 @@
         width: 100%;
         z-index: 999;
         box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
-        background-color: var(--whiteColor) !important;
+        background-color: var(--color-secundario) !important;
         animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;   
     }
 }
 .navbar-light {
-    background-color: var(--whiteColor) !important;
+    background-color: var(--color-secundario) !important;
 
     .navbar-brand {
         font-size: 28px;
@@ -193,7 +193,7 @@
         }
         .navbar-nav {
             margin-left: 0;
-            background-color: #f9f9f9;
+            background-color: var(--color-secundario);
             padding: 20px;
             margin-top: 10px;
 
@@ -282,7 +282,7 @@
         }
         .navbar-nav {
             margin-left: 0;
-            background-color: #f9f9f9;
+            background-color: var(--color-secundario);
             padding: 20px;
             margin-top: 10px;
 

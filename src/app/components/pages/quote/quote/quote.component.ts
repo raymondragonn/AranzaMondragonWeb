@@ -9,5 +9,5 @@ export class QuoteComponent implements OnInit {
   constructor() { }
   ngOnInit(): void { }
   
-  quote = "Tu cuerpo puede hacerlo. Es tu mente la que necesitas convencer.";
+  quote = "";
 }

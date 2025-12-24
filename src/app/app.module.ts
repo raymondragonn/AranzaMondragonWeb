@@ -14,6 +14,7 @@ import { FunfactsComponent } from './components/pages/funfacts/funfacts.componen
 import { FeedbackComponent } from './components/pages/feedback/feedback.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { QuoteComponent } from './components/pages/quote/quote/quote.component';
+import { VideoComponent } from './components/pages/video/video.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { QuoteComponent } from './components/pages/quote/quote/quote.component';
     FunfactsComponent,
     FeedbackComponent,
     ContactComponent,
-    QuoteComponent
+    QuoteComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,

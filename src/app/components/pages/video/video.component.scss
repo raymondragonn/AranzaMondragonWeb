@@ -1,0 +1,18 @@
+.video-area {
+    position: relative;
+    background-color: rgb(250, 250, 250);
+    overflow: hidden;
+    padding: {
+        top: 60px;
+        bottom: 60px;
+    }
+    
+    .container {
+        position: relative;
+    }
+    
+    .video-content {
+        text-align: center;
+    }
+}
+

@@ -1,7 +1,7 @@
 .quote-area {
     padding: {
-        top: 150px;
-        bottom: 150px;
+        top: 40px;
+        bottom: 40px;
     };
     background-color: #2a2a2a;
 }
@@ -10,7 +10,7 @@
     text-align: center;
     
     p {
-        font-size: 42px;
+        font-size: 32px;
         font-weight: 700;
         font-family: var(--mainFontFamily);
         color: var(--whiteColor);
@@ -26,15 +26,15 @@
 @media only screen and (max-width: 767px) {
     .quote-area {
         padding: {
-            top: 50px;
-            bottom: 50px;
+            top: 20px;
+            bottom: 20px;
         };
     }
     .quote-content {
         padding: 0 20px;
 
         p {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 1.5;
             max-width: 100%;
         }
@@ -45,13 +45,13 @@
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .quote-area {
         padding: {
-            top: 120px;
-            bottom: 120px;
+            top: 30px;
+            bottom: 30px;
         };
     }
     .quote-content {
         p {
-            font-size: 32px;
+            font-size: 24px;
         }
     }
 }
@@ -60,7 +60,7 @@
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .quote-content {
         p {
-            font-size: 38px;
+            font-size: 28px;
         }
     }
 }

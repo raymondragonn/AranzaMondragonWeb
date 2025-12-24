@@ -1,30 +1,15 @@
 .banner-area {
     position: relative;
     z-index: 1;
-    background: {
-        image: url(../../../../assets/img/book-banner-bg.jpg);
-        position: center center;
-        size: cover;
-        repeat: no-repeat;
-    };
+    background-color: rgb(250, 250, 250);
     padding: {
         top: 20px;
         bottom: 40px;
     };
-    &::before {
-        left: 0;
-        right: 0;
-        top: 0;
-        z-index: -1;
-        content: "";
-        width: 100%;
-        height: 100%;
-        opacity: .6;
-        position: absolute;
-        background-color: var(--whiteColor);
-    }
 }
 .main-banner-content {
+    padding-top: 60px;
+    
     .sub-title {
         display: block;
         color: var(--mainColor);
@@ -36,7 +21,7 @@
         };
     }
     h1 {
-        font-size: 72px;
+        font-size: 52px;
         margin-bottom: 8px;
         color: var(--blackColor);
     }
@@ -46,7 +31,17 @@
         line-height: 1.3;
     }
     .banner-btn {
-        margin-top: 30px;
+        margin-top: 50px;
+        
+        .default-btn {
+            font-size: 24px;
+            padding: {
+                top: 18px;
+                left: 45px;
+                right: 45px;
+                bottom: 15px;
+            };
+        }
     }
     .text {
         margin-top: 15px;
@@ -116,13 +111,14 @@
     .main-banner-content {
         text-align: center;
         margin-top: 15px;
+        padding-top: 40px;
 
         .sub-title {
             font-size: 16px;
             margin-bottom: 6px;
         }
         h1 {
-            font-size: 36px;
+            font-size: 28px;
             margin-bottom: 5px;
             line-height: 1.2;
         }
@@ -132,7 +128,17 @@
             margin-bottom: 10px;
         }
         .banner-btn {
-            margin-top: 15px;
+            margin-top: 30px;
+            
+            .default-btn {
+                font-size: 20px;
+                padding: {
+                    top: 15px;
+                    left: 35px;
+                    right: 35px;
+                    bottom: 12px;
+                };
+            }
         }
     }
 
@@ -152,12 +158,13 @@
     }
     .main-banner-content {
         text-align: center;
+        padding-top: 50px;
         
         .sub-title {
             font-size: 19px;
         }
         h1 {
-            font-size: 54px;
+            font-size: 40px;
         }
         p {
             font-size: 22px;
@@ -167,6 +174,19 @@
                 left: auto;
                 right: auto;
             };
+        }
+        .banner-btn {
+            margin-top: 40px;
+            
+            .default-btn {
+                font-size: 22px;
+                padding: {
+                    top: 16px;
+                    left: 40px;
+                    right: 40px;
+                    bottom: 13px;
+                };
+            }
         }
     }
     .banner-image {
@@ -190,7 +210,7 @@
             font-size: 20px;
         }
         h1 {
-            font-size: 60px;
+            font-size: 46px;
         }
         p {
             font-size: 23px;

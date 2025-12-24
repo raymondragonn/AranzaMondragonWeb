@@ -15,21 +15,14 @@ export class BannerComponent implements OnInit {
     bannerContent = [
         {
             subTitle: 'COACH FITNESS DE MUJERES',
-            title: 'Aranza Mondragón',
+            title: 'Ayudo a mujeres a crecer glúteos, lucir su abdomen y ganar confianza, SIN renunciar a sus gustos',
             paragraphList: [
                 {
-                    text: "Transforma tu cuerpo y tu vida con entrenamiento personalizado"
-                },
-                {
-                    text: "Crece glúteos, define tu abdomen y gana confianza",
+                    text: "- Aranza Mondragón",
                     isHighlight: false
-                },
-                {
-                    text: "SIN renunciar a tus gustos",
-                    isHighlight: true
                 }
             ],
-            buttonText: '¡Quiero mi transformación!',
+            buttonText: '¡Quiero transformar mi cuerpo!',
             buttonLink: 'https://api.whatsapp.com/send/?phone=522294485585&text=Hola%20Aranza,%20me%20interesa%20tu%20asesoría%20personalizada'
         }
     ];

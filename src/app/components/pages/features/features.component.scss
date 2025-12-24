@@ -3,24 +3,7 @@
     z-index: 1;
     padding-top: 120px;
     padding-bottom: 80px;
-    background: {
-        image: url(../../../../assets/img/fun-facts-bg.jpg);
-        position: center center;
-        size: cover;
-        repeat: no-repeat;
-    };
-    &::before {
-        left: 0;
-        right: 0;
-        top: 0;
-        content: "";
-        height: 100%;
-        width: 100%;
-        opacity: .50;
-        z-index: -1;
-        position: absolute;
-        background-color: #000000;
-    }
+    background-color: var(--whiteColor);
 
     .row.align-items-center {
         column-gap: 40px;
@@ -48,14 +31,14 @@
         }
         
         .brand-line-1 {
-            color: var(--whiteColor);
+            color: var(--blackColor);
             font-size: 38px;
             letter-spacing: 4px;
             font-weight: 700;
         }
         
         .brand-line-2 {
-            color: var(--whiteColor);
+            color: var(--blackColor);
             font-size: 46px;
             letter-spacing: 5px;
             font-weight: 800;
@@ -65,7 +48,7 @@
     p {
         font-size: 26px;
         line-height: 1.7;
-        color: var(--whiteColor);
+        color: var(--blackColor);
     }
 }
 
@@ -180,7 +163,7 @@
         
         p {
             font-size: 22px;
-            color: var(--whiteColor);
+            color: var(--blackColor);
         }
     }
 
@@ -245,7 +228,7 @@
         
         p {
             font-size: 22px;
-            color: var(--whiteColor);
+            color: var(--blackColor);
         }
     }
 

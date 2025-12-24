@@ -6,13 +6,17 @@
         </div>
         
         <div class="feedback-slider">
-            <div class="single-feedback-box" *ngFor="let Content of singleFeedback;" (click)="openModal(Content)">
-                <p>{{Content.paragraph}}</p>
-                <div class="d-flex align-items-center">
-                    <img [src]="Content.userImg" alt="client">
-                    <div class="title">
-                        <h3>{{Content.userName}}</h3>
-                        <span>{{Content.userDesignation}}</span>
+            <div class="single-feedback-box" *ngFor="let Content of singleFeedback;">
+                <div class="feedback-content-wrapper">
+                    <div class="feedback-text-section">
+                        <p>{{Content.paragraph}}</p>
+                        <div class="title">
+                            <h3>{{Content.userName}}</h3>
+                            <span>{{Content.userDesignation}}</span>
+                        </div>
+                    </div>
+                    <div class="feedback-image-section">
+                        <img [src]="Content.transformationImg" alt="Transformación" class="transformation-img">
                     </div>
                 </div>
             </div>
@@ -20,37 +24,3 @@
         <div class="feedback-arrows-container"></div>
     </div>
 </section>
-
-<!-- Modal -->
-<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true" [class.show]="showModal" [style.display]="showModal ? 'block' : 'none'">
-    <div class="modal-dialog modal-dialog-centered modal-lg" *ngIf="selectedFeedback">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="feedbackModalLabel">{{selectedFeedback.userName}}</h5>
-                <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 mb-4">
-                        <div class="modal-feedback-text">
-                            <p class="modal-quote">{{selectedFeedback.paragraph}}</p>
-                            <div class="d-flex align-items-center mt-4">
-                                <img [src]="selectedFeedback.userImg" alt="client" class="modal-user-img">
-                                <div class="title ms-3">
-                                    <h3>{{selectedFeedback.userName}}</h3>
-                                    <span>{{selectedFeedback.userDesignation}}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="modal-transformation-image">
-                            <img [src]="selectedFeedback.transformationImg" alt="Transformación" class="transformation-img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal-backdrop fade" [class.show]="showModal" [style.display]="showModal ? 'block' : 'none'" (click)="closeModal()"></div>

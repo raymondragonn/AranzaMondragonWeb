@@ -16,8 +16,8 @@ export class ContactComponent implements OnInit {
 
     sectionTitle: sectionTitleContent[] = [
         {
-            title: 'Hablemos de tus objetivos',
-            paragraphText: 'Completa el formulario y te contactaré pronto.'
+            title: 'Agenda tu sesión de valoración',
+            paragraphText: 'Selecciona el día y hora que mejor se adapte a tu agenda para tu sesión personalizada.'
         }
     ]
     contactImage: Image[] = [

@@ -17,15 +17,26 @@ export class AboutComponent implements OnInit {
             img: 'assets/img/ABOUT_ARANZA.jpeg'
         }
     ]
+    showModal = false;
+    originalParagraphs = [
+        "Soy Aranza Mondragón, entrenadora personal certificada especializada en transformación física para mujeres. Mi pasión por el fitness comenzó durante la pandemia, cuando descubrí el poder transformador del entrenamiento y la nutrición balanceada.",
+        "Hoy, me dedico a ayudar a mujeres a alcanzar sus objetivos físicos de manera sostenible, sin dietas extremas ni rutinas imposibles. Mi enfoque se centra en el crecimiento de glúteos, definición abdominal y, sobre todo, en aumentar la confianza y autoestima de mis asesoradas."
+    ];
+
+    openModal(): void {
+        this.showModal = true;
+    }
+
+    closeModal(): void {
+        this.showModal = false;
+    }
+
     aboutContent = [
         {
             title: 'Conoce a tu Entrenadora',
             paragraphList: [
                 {
-                    paragraph: "Soy Aranza Mondragón, entrenadora personal certificada especializada en transformación física para mujeres. Mi pasión por el fitness comenzó durante la pandemia, cuando descubrí el poder transformador del entrenamiento y la nutrición balanceada.",
-                },
-                {
-                    paragraph: "Hoy, me dedico a ayudar a mujeres a alcanzar sus objetivos físicos de manera sostenible, sin dietas extremas ni rutinas imposibles. Mi enfoque se centra en el crecimiento de glúteos, definición abdominal y, sobre todo, en aumentar la confianza y autoestima de mis asesoradas.",
+                    paragraph: "Desde el inicio de la pandemia, busqué mantenerme activa y saludable. Poco a poco, me enamoré del mundo fitness y decidí prepararme profesionalmente para ayudar a otras personas a lograr sus objetivos, compartiendo mis conocimientos y pasión por el entrenamiento y la nutrición.",
                 }
             ],
             featuresList: [
