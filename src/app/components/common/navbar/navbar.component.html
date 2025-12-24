@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/" fragment="home">
+            <span class="brand-text">
+                <span class="brand-line-1">THE CONFIDENCE</span>
+                <span class="brand-line-2">METHOD</span>
+            </span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item" *ngFor="let navItem of navItems;">
+                    <a [href]="navItem.isLink ? navItem.id : '#' + navItem.id" 
+                       [target]="navItem.isLink ? '_blank' : null" 
+                       [rel]="navItem.isLink ? 'noopener' : null"
+                       class="nav-link">{{navItem.title}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,25 @@
+<div id="home" class="banner-area jarallax" data-jarallax='{"speed": 0.3}'>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12 order-2 order-lg-1">
+                <div class="main-banner-content" *ngFor="let Content of bannerContent;">
+                    <span class="sub-title">{{Content.subTitle}}</span>
+                    <h1>{{Content.title}}</h1>
+                    <p *ngFor="let List of Content.paragraphList">
+                        <span *ngIf="List.isHighlight" class="highlight-text">{{List.text}}</span>
+                        <span *ngIf="!List.isHighlight">{{List.text}}</span>
+                    </p>
+                    <div class="banner-btn">
+                        <a [href]="Content.buttonLink" target="_blank" rel="noopener" class="default-btn">{{Content.buttonText}}<span></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 order-1 order-lg-2">
+                <div class="banner-image text-center" *ngFor="let Image of bannerImage;">
+                    <img [src]="Image.img" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

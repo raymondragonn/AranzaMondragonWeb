@@ -1,0 +1,55 @@
+<section id="about" class="about-area">
+    <div class="container">
+        <!-- Desktop / Tablet layout -->
+        <div class="row align-items-center d-none d-lg-flex">
+            <div class="col-lg-4 col-md-12">
+                <div class="about-image" *ngFor="let Image of aboutImage;">
+                    <img [src]="Image.img" alt="image">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="about-content" *ngFor="let Content of aboutContent;">
+                    <h3>{{Content.title}}</h3>
+                    <p *ngFor="let pList of Content.paragraphList">{{pList.paragraph}}</p>
+                    <div class="about-checklist">
+                        <p>Si tú quieres:</p>
+                        <p>✅ Disminuir grasa abdominal sin rebotes</p>
+                        <p>✅ Verte y sentirte más cómoda en tu ropa</p>
+                        <p>✅ Comer sin culpa y sin extremos</p>
+                        <p>✅ Ganar firmeza, energía y seguridad</p>
+                        <p>✅ Dejar de empezar y abandonar</p>
+                        <p class="about-checklist-final">Este es el momento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile layout -->
+        <div class="row d-flex d-lg-none">
+            <div class="col-12">
+                <div class="about-content" *ngFor="let Content of aboutContent;">
+                    <h3 class="about-title-mobile">{{Content.title}}</h3>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="about-image" *ngFor="let Image of aboutImage;">
+                    <img [src]="Image.img" alt="image">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="about-content about-text-mobile" *ngFor="let Content of aboutContent;">
+                    <p *ngFor="let pList of Content.paragraphList">{{pList.paragraph}}</p>
+                    <div class="about-checklist">
+                        <p>Si tú quieres:</p>
+                        <p>✅ Disminuir grasa abdominal sin rebotes</p>
+                        <p>✅ Verte y sentirte más cómoda en tu ropa</p>
+                        <p>✅ Comer sin culpa y sin extremos</p>
+                        <p>✅ Ganar firmeza, energía y seguridad</p>
+                        <p>✅ Dejar de empezar y abandonar</p>
+                        <p class="about-checklist-final">Este es el momento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

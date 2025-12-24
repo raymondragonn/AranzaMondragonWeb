@@ -1,0 +1,278 @@
+.features-area {
+    position: relative;
+    z-index: 1;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    background: {
+        image: url(../../../../assets/img/fun-facts-bg.jpg);
+        position: center center;
+        size: cover;
+        repeat: no-repeat;
+    };
+    &::before {
+        left: 0;
+        right: 0;
+        top: 0;
+        content: "";
+        height: 100%;
+        width: 100%;
+        opacity: .50;
+        z-index: -1;
+        position: absolute;
+        background-color: #000000;
+    }
+
+    .row.align-items-center {
+        column-gap: 40px;
+    }
+}
+
+.section-title {
+    position: sticky;
+    top: 100px;
+    text-align: left;
+    
+    h2 {
+        margin-bottom: 15px;
+        font-size: 52px;
+        font-weight: 700;
+        font-family: var(--headingFontFamily);
+        text-transform: uppercase;
+        display: flex;
+        align-items: flex-start;
+        
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+        
+        .brand-line-1 {
+            color: var(--whiteColor);
+            font-size: 38px;
+            letter-spacing: 4px;
+            font-weight: 700;
+        }
+        
+        .brand-line-2 {
+            color: var(--whiteColor);
+            font-size: 46px;
+            letter-spacing: 5px;
+            font-weight: 800;
+        }
+    }
+    
+    p {
+        font-size: 26px;
+        line-height: 1.7;
+        color: var(--whiteColor);
+    }
+}
+
+.single-features {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    padding: 25px;
+    background-color: var(--color-secundario);
+    border-radius: 0;
+    transition: var(--transition);
+    cursor: pointer;
+
+    .icon {
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+        background-color: var(--color-secundario);
+        color: var(--mainColor);
+        font-size: 35px;
+        border-radius: 50%;
+        transition: var(--transition);
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        transition: var(--transition);
+    }
+    .feature-paragraph {
+        transition: all 0.3s ease-in-out;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 0;
+        margin-top: 10px;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+    &::before {
+        top: 0;
+        left: 0;
+        width: 0%;
+        z-index: -1;
+        content: "";
+        height: 100%;
+        position: absolute;
+        border-radius: 0;
+        background-color: var(--mainColor);
+        transition: var(--transition);
+    }
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+        .icon {
+            background-color: var(--whiteColor);
+            color: var(--mainColor);
+        }
+        h3 {
+            color: var(--whiteColor);
+        }
+        .feature-paragraph {
+            opacity: 1;
+            max-height: 200px;
+            color: var(--whiteColor);
+        }
+    }
+    &.expanded {
+        .feature-paragraph {
+            opacity: 1;
+            max-height: 200px;
+        }
+        &:hover {
+            .feature-paragraph {
+                color: var(--whiteColor);
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .features-area {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .section-title {
+        position: relative;
+        top: 0;
+        margin-bottom: 40px;
+        text-align: left;
+        
+        h2 {
+            font-size: 34px;
+            justify-content: flex-start;
+            
+            .brand-line-1 {
+                font-size: 26px;
+                letter-spacing: 3px;
+            }
+            
+            .brand-line-2 {
+                font-size: 30px;
+                letter-spacing: 4px;
+            }
+        }
+        
+        p {
+            font-size: 22px;
+            color: var(--whiteColor);
+        }
+    }
+
+    .single-features {
+        padding: 20px 15px;
+        text-align: center;
+    
+        .icon {
+            height: 60px;
+            width: 60px;
+            line-height: 60px;
+            font-size: 35px;
+            margin: {
+                left: auto;
+                right: auto;
+                bottom: 20px;
+            };
+        }
+        h3 {
+            font-size: 22px;
+        }
+        .feature-paragraph {
+            opacity: 1;
+            max-height: none;
+            margin-top: 15px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .features-area {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+
+    .section-title {
+        position: relative;
+        top: 0;
+        margin-bottom: 40px;
+        text-align: left;
+        
+        h2 {
+            font-size: 38px;
+            justify-content: flex-start;
+            
+            .brand-line-1 {
+                font-size: 30px;
+                letter-spacing: 3.5px;
+            }
+            
+            .brand-line-2 {
+                font-size: 34px;
+                letter-spacing: 4.5px;
+            }
+        }
+        
+        p {
+            font-size: 22px;
+            color: var(--whiteColor);
+        }
+    }
+
+    .single-features {
+        padding: 20px;
+        margin-bottom: 20px;
+
+        .icon {
+            width: 55px;
+            height: 55px;
+            line-height: 55px;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .feature-paragraph {
+            opacity: 1;
+            max-height: none;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}

@@ -1,0 +1,210 @@
+.banner-area {
+    position: relative;
+    z-index: 1;
+    background: {
+        image: url(../../../../assets/img/book-banner-bg.jpg);
+        position: center center;
+        size: cover;
+        repeat: no-repeat;
+    };
+    padding: {
+        top: 20px;
+        bottom: 40px;
+    };
+    &::before {
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        content: "";
+        width: 100%;
+        height: 100%;
+        opacity: .6;
+        position: absolute;
+        background-color: var(--whiteColor);
+    }
+}
+.main-banner-content {
+    .sub-title {
+        display: block;
+        color: var(--mainColor);
+        margin-bottom: 10px;
+        font: {
+            weight: 600;
+            family: var(--headingFontFamily);
+            size: 22px;
+        };
+    }
+    h1 {
+        font-size: 72px;
+        margin-bottom: 8px;
+        color: var(--blackColor);
+    }
+    p {
+        font-size: 24px;
+        color: var(--blackColor);
+        line-height: 1.3;
+    }
+    .banner-btn {
+        margin-top: 30px;
+    }
+    .text {
+        margin-top: 15px;
+    }
+}
+.banner-image {
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 650px;
+    height: 650px;
+    margin: auto;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        position: relative;
+        z-index: 2;
+    }
+    &::before {
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        content: "";
+        width: 650px;
+        height: 650px;
+        max-width: 80vw;
+        max-height: 80vw;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        background-color: var(--whiteColor);
+        border-radius: 50%;
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .banner-area {
+        padding: {
+            top: 30px;
+            bottom: 30px;
+        };
+    }
+    .banner-image {
+        margin-top: 10px;
+        width: 450px;
+        height: 450px;
+        max-width: 95vw;
+        max-height: 95vw;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+    .main-banner-content {
+        text-align: center;
+        margin-top: 15px;
+
+        .sub-title {
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+        .banner-btn {
+            margin-top: 15px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .banner-area {
+        padding: {
+            top: 30px;
+            bottom: 40px;
+        };
+    }
+    .main-banner-content {
+        text-align: center;
+        
+        .sub-title {
+            font-size: 19px;
+        }
+        h1 {
+            font-size: 54px;
+        }
+        p {
+            font-size: 22px;
+            line-height: 1.3;
+            max-width: 540px;
+            margin: {
+                left: auto;
+                right: auto;
+            };
+        }
+    }
+    .banner-image {
+        margin-top: 20px;
+        width: 500px;
+        height: 500px;
+        
+        &::before {
+            width: 550px;
+            height: 550px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .main-banner-content {
+        .sub-title {
+            font-size: 20px;
+        }
+        h1 {
+            font-size: 60px;
+        }
+        p {
+            font-size: 23px;
+            line-height: 1.3;
+        }
+    }
+    .banner-image {
+        width: 600px;
+        height: 600px;
+        
+        &::before {
+            width: 600px;
+            height: 600px;
+        }
+    }
+
+}

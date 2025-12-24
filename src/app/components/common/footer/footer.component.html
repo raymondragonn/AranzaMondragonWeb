@@ -1,0 +1,23 @@
+<div class="copy-right">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 col-12 text-md-start text-center">
+                <p *ngIf="copyrightText[0]">
+                    <i class="las la-copyright"></i>{{copyrightText[0].text}}
+                </p>
+            </div>
+            <div class="col-md-6 col-12 text-md-end text-center">
+                <p *ngIf="copyrightText[1]">
+                    <a *ngIf="copyrightText[1].link" [href]="copyrightText[1].link" target="_blank" rel="noopener noreferrer">
+                        Desarrollado por
+                        <img src="assets/img/LOGO_KODEO.png" alt="Kodeo" class="kodeo-logo">
+                    </a>
+                    <span *ngIf="!copyrightText[1].link">
+                        Desarrollado por
+                        <img src="assets/img/LOGO_KODEO.png" alt="Kodeo" class="kodeo-logo">
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
