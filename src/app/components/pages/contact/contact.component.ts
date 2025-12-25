@@ -39,7 +39,6 @@ export class ContactComponent implements OnInit {
     }
 
     onSendWhatsApp(name: string, subject: string, message: string): void {
-        // Mostrar animación de éxito
         this.showSuccess = true;
         setTimeout(() => {
             this.showSuccess = false;

@@ -1,8 +1,14 @@
 <section id="feedback" class="reviews-area ptb-100">
     <div class="container">
         <div class="section-title" *ngFor="let Content of sectionTitle;">
-            <h2>{{Content.title}}</h2>
+            <h2>Esto pasa en <span class="brand-title"><span class="brand-line-1">The Confidence</span><span class="brand-line-2">Method</span></span></h2>
             <p>{{Content.paragraphText}}</p>
+        </div>
+        
+        <!-- Indicador de scroll para móviles -->
+        <div class="scroll-hint-mobile">
+            <span>Desliza para ver más</span>
+            <i class="las la-arrow-right"></i>
         </div>
         
         <div class="feedback-slider">

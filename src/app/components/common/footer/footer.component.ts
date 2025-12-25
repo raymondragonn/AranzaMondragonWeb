@@ -14,7 +14,8 @@ export class FooterComponent implements OnInit {
 
     copyrightText: Text[] = [
         {
-            text: new Date().getFullYear() + ' Aranza Mondragón. Todos los derechos reservados.'
+            text: new Date().getFullYear() + ' Aranza Mondragón.',
+            subtext: 'Todos los derechos reservados.'
         },
         {
             text: 'Desarrollado por Kodeo',
@@ -25,5 +26,6 @@ export class FooterComponent implements OnInit {
 }
 class Text {
     text : string;
+    subtext? : string;
     link? : string;
 }

@@ -25,7 +25,7 @@ export class FeaturesComponent implements OnInit {
     sectionTitle: sectionTitleContent[] = [
         {
             title: "THE CONFIDENCE METHOD",
-            paragraphText: 'Es un método comprobado y totalmente personalizado para mujeres de 25 a 45 años que HOY estén listas para:',
+            paragraphText: 'Es un método <strong>comprobado y totalmente personalizado</strong> para mujeres de 25 a 45 años que HOY estén listas para:',
             listItems: [
                 'Recuperar su confianza, energía y autoestima.',
                 'Disminuir grasa abdominal sin dietas extremas.',

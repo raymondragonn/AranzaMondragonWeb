@@ -15,14 +15,14 @@ export class BannerComponent implements OnInit {
     bannerContent = [
         {
             subTitle: 'COACH FITNESS DE MUJERES',
-            title: 'Ayudo a mujeres a recuperar su confianza, disminuyendo su abdomen y ganando firmeza en glúteos y piernas. SIN rutinas ni dietas extremas.',
+            title: 'Ayudo a mujeres a recuperar su <strong>confianza</strong>, disminuyendo su <strong>abdomen</strong> y ganando <strong>firmeza en glúteos y piernas</strong>. SIN rutinas ni dietas extremas.',
             paragraphList: [
                 {
                     text: "- Aranza Mondragón",
                     isHighlight: false
                 }
             ],
-            buttonText: '¡Quiero transformar mi cuerpo!',
+            buttonText: '¡ESTOY LISTA!',
             buttonLink: '#contact'
         }
     ];

@@ -2,12 +2,45 @@
     background-color: var(--mainColor);
     
     .section-title {
+        max-width: 700px;
+        
         h2 {
             color: var(--whiteColor);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            
+            .brand-title {
+                display: inline-flex;
+                flex-direction: column;
+                align-items: flex-start;
+                line-height: 1.1;
+                
+                .brand-line-1 {
+                    font-size: 24px;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-family: var(--headingFontFamily);
+                }
+                
+                .brand-line-2 {
+                    font-size: 32px;
+                    letter-spacing: 4px;
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    font-family: var(--headingFontFamily);
+                }
+            }
         }
         
         p {
-            color: var(--whiteColor);
+            color: #ffe4c9;
+            max-width: 100%;
+            font-size: 20px;
+            line-height: 1.6;
         }
     }
 
@@ -25,6 +58,11 @@
         }
     }
 }
+// Indicador de scroll - oculto por defecto en desktop
+.scroll-hint-mobile {
+    display: none;
+}
+
 .feedback-slider {
     margin-top: 50px;
     
@@ -199,6 +237,62 @@
 
 /* Max width 767px */
 @media only screen and (max-width: 767px) {
+    .reviews-area {
+        .section-title {
+            h2 {
+                flex-direction: row;
+                gap: 15px;
+                font-size: 34px;
+                
+                .brand-title {
+                    align-items: flex-start;
+                    
+                    .brand-line-1 {
+                        font-size: 14px;
+                        letter-spacing: 1.5px;
+                    }
+                    
+                    .brand-line-2 {
+                        font-size: 18px;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+        }
+    }
+    
+    // Indicador de scroll visible en móviles
+    .scroll-hint-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: var(--whiteColor);
+        opacity: 0.8;
+        
+        span {
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        
+        i {
+            font-size: 18px;
+            animation: slideRight 1.5s ease-in-out infinite;
+        }
+    }
+    
+    @keyframes slideRight {
+        0%, 100% {
+            transform: translateX(0);
+            opacity: 0.8;
+        }
+        50% {
+            transform: translateX(8px);
+            opacity: 1;
+        }
+    }
 
     .single-feedback-box {
         .feedback-content-wrapper {
@@ -222,6 +316,30 @@
         .feedback-image-section {
             height: 180px;
             flex: 0 0 auto;
+        }
+        
+        // Deshabilitar animaciones de hover en móviles
+        &:hover {
+            transform: none;
+            box-shadow: none;
+            
+            .feedback-text-section {
+                p {
+                    color: var(--blackColor);
+                }
+                
+                .title {
+                    h3 {
+                        color: var(--blackColor);
+                    }
+                }
+            }
+            
+            .feedback-image-section {
+                .transformation-img {
+                    transform: none;
+                }
+            }
         }
     }
     

@@ -29,6 +29,33 @@ body {
         family: var(--mainFontFamily);
         size: var(--fontSize);
     };
+    
+    // Protección de contenido
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+// Proteger imágenes y videos
+img, video {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+}
+
+// Permitir interacción con video controls
+video {
+    pointer-events: auto;
+}
+
+// Evitar que se guarden imágenes en móviles
+img {
+    -webkit-touch-callout: none;
 }
 a {
     transition: var(--transition);
@@ -146,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
         transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
     &:hover {
-        color: var(--whiteColor) !important;
+        color: var(--mainColor) !important;
         background-color: var(--mainColor);
         box-shadow: 0 0 40px 3px rgba(0, 0, 0, 0.10);
 

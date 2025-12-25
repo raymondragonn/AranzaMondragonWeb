@@ -1,7 +1,7 @@
 .contact-area {
     position: relative;
     background-color: rgb(250, 250, 250);
-    overflow: hidden;
+    overflow: visible;
     padding: {
         top: 60px;
         bottom: 60px;
@@ -32,10 +32,16 @@
         margin-top: 0;
     }
     
-    iframe {
-        display: block;
-        border: none;
-        overflow: hidden;
+    .calendly-container {
+        width: 100%;
+        height: 700px;
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
     }
 }
 
@@ -227,12 +233,24 @@
 @media only screen and (max-width: 767px) {
 
     .contact-area {
+        padding: {
+            top: 40px;
+            bottom: 40px;
+        }
+        overflow: visible;
+        
         .section-title {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         
         .row {
             margin-top: 0;
+        }
+        
+        .calendly-container {
+            margin: 0;
+            width: 100%;
+            height: 650px;
         }
     }
 

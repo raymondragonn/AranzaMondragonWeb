@@ -2,8 +2,9 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 col-12 text-md-start text-center">
-                <p *ngIf="copyrightText[0]">
-                    <i class="las la-copyright"></i>{{copyrightText[0].text}}
+                <p *ngIf="copyrightText[0]" class="copyright-text">
+                    <span class="copyright-main"><i class="las la-copyright"></i>{{copyrightText[0].text}}</span>
+                    <span class="copyright-sub" *ngIf="copyrightText[0].subtext">{{copyrightText[0].subtext}}</span>
                 </p>
             </div>
             <div class="col-md-6 col-12 text-md-end text-center">

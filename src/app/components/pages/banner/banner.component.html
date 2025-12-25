@@ -4,7 +4,7 @@
             <div class="col-lg-6 col-md-12 order-2 order-lg-1">
                 <div class="main-banner-content" *ngFor="let Content of bannerContent;">
                     <span class="sub-title">{{Content.subTitle}}</span>
-                    <h1>{{Content.title}}</h1>
+                    <h1 [innerHTML]="Content.title"></h1>
                     <p *ngFor="let List of Content.paragraphList">
                         <span *ngIf="List.isHighlight" class="highlight-text">{{List.text}}</span>
                         <span *ngIf="!List.isHighlight">{{List.text}}</span>

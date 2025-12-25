@@ -2,8 +2,26 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8 col-md-12">
-        <div class="video-content">
-                    <video controls controlsList="nodownload" preload="metadata" class="video-player">
+                <div class="video-content">
+                    <!-- Vista previa con botón de play -->
+                    <div class="video-preview" *ngIf="!isPlaying" (click)="playVideo()">
+                        <img [src]="posterImage" alt="Vista previa del video" class="video-poster">
+                        <div class="play-overlay">
+                            <div class="play-button">
+                                <i class="las la-play"></i>
+                            </div>
+                            <span class="play-text">Ver video</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Video player (se muestra al hacer clic) -->
+                    <video 
+                        #videoPlayer
+                        *ngIf="isPlaying"
+                        controls 
+                        controlsList="nodownload" 
+                        autoplay
+                        class="video-player">
                         <source src="assets/img/VIDEO_CAMBIO.MOV" type="video/quicktime">
                         <source src="assets/img/VIDEO_CAMBIO.MOV" type="video/mp4">
                         Tu navegador no soporta la reproducción de video.
@@ -26,4 +44,3 @@
         </div>
     </div>
 </section>
-

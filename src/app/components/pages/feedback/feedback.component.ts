@@ -88,8 +88,8 @@ export class FeedbackComponent implements OnInit, AfterViewInit, OnDestroy {
 
     sectionTitle = [
         {
-            title: 'Lo Que Dicen Mis Asesoradas',
-            paragraphText: 'Testimonios reales de mujeres que han transformado su cuerpo y su vida.'
+            title: 'Esto pasa en THE CONFIDENCE METHOD',
+            paragraphText: 'Testimonios reales de mujeres que han transformado su cuerpo y su vida. No por tener más tiempo, ni más disciplina. Si no, por iniciar con estrategia y guía.'
         }
     ]
     singleFeedback = [

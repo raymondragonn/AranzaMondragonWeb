@@ -111,10 +111,10 @@
     .preloader {
         .preloader-content {
             padding: 30px 20px;
-            text-align: center;
+            text-align: left;
 
             .brand-text {
-                align-items: center;
+                align-items: flex-start;
                 margin-bottom: 15px;
             }
             
@@ -135,7 +135,7 @@
             .brand-name {
                 font-size: 18px;
                 letter-spacing: 2px;
-                text-align: center;
+                text-align: left;
             }
         }
     }
