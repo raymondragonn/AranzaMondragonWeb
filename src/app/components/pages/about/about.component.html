@@ -10,8 +10,8 @@
             <div class="col-lg-6 col-md-12">
                 <div class="about-content" *ngFor="let Content of aboutContent;">
                     <h3>{{Content.title}}</h3>
-                    <p *ngFor="let pList of Content.paragraphList">{{pList.paragraph}}</p>
-                    <button class="about-read-more-btn" (click)="openModal()">Ver más</button>
+                    <p *ngFor="let pList of Content.paragraphList" [innerHTML]="pList.paragraph"></p>
+                    <button class="about-read-more-btn" (click)="openModal()">Leer más</button>
                 </div>
             </div>
         </div>
@@ -30,8 +30,8 @@
             </div>
             <div class="col-12">
                 <div class="about-content about-text-mobile" *ngFor="let Content of aboutContent;">
-                    <p *ngFor="let pList of Content.paragraphList">{{pList.paragraph}}</p>
-                    <button class="about-read-more-btn" (click)="openModal()">Ver más</button>
+                    <p *ngFor="let pList of Content.paragraphList" [innerHTML]="pList.paragraph"></p>
+                    <button class="about-read-more-btn" (click)="openModal()">Leer más</button>
                     <div class="about-checklist d-none d-lg-block">
                         <p>Si tú quieres:</p>
                         <p>✅ Disminuir grasa abdominal sin rebotes</p>
@@ -50,8 +50,8 @@
     <div class="about-modal-overlay" *ngIf="showModal" (click)="closeModal()">
         <div class="about-modal-content" (click)="$event.stopPropagation()">
             <button class="about-modal-close" (click)="closeModal()">&times;</button>
-            <h3>Conoce a tu Entrenadora</h3>
-            <p *ngFor="let paragraph of originalParagraphs">{{paragraph}}</p>
+            <h3>Sobre mí</h3>
+            <p *ngFor="let paragraph of originalParagraphs" [innerHTML]="paragraph"></p>
         </div>
     </div>
 </section>

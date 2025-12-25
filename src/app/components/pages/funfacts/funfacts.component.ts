@@ -30,7 +30,7 @@ export class FunfactsComponent implements OnInit {
         },
         {
             icon: 'las la-star',
-            title: '4.9/5',
+            title: '4.86/5',
             subTitle: 'Calificación Promedio'
         }
     ]

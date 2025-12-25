@@ -15,7 +15,7 @@ export class BannerComponent implements OnInit {
     bannerContent = [
         {
             subTitle: 'COACH FITNESS DE MUJERES',
-            title: 'Ayudo a mujeres a crecer glúteos, lucir su abdomen y ganar confianza, SIN renunciar a sus gustos',
+            title: 'Ayudo a mujeres a recuperar su confianza, disminuyendo su abdomen y ganando firmeza en glúteos y piernas. SIN rutinas ni dietas extremas.',
             paragraphList: [
                 {
                     text: "- Aranza Mondragón",

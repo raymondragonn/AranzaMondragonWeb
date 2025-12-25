@@ -9,7 +9,10 @@
                             <span class="brand-line-2">METHOD</span>
                         </span>
                     </h2>
-                    <p>{{sectionTitleContent.paragraphText}}</p>
+                    <p [innerHTML]="sectionTitleContent.paragraphText"></p>
+                    <ul class="benefits-list" *ngIf="sectionTitleContent.listItems">
+                        <li *ngFor="let item of sectionTitleContent.listItems">{{item}}</li>
+                    </ul>
                 </div>
             </div>
             <div class="col-lg-7 col-md-12">
@@ -20,7 +23,7 @@
                                 <i class="{{FeaturesContent.icon}}"></i>
                             </div>
                             <h3>{{FeaturesContent.title}}</h3>
-                            <p class="feature-paragraph">{{FeaturesContent.paragraph}}</p>
+                            <p class="feature-paragraph" [innerHTML]="FeaturesContent.paragraph"></p>
                         </div>
                     </div>
                 </div>

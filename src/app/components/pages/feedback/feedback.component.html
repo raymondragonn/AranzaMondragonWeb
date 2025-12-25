@@ -9,7 +9,7 @@
             <div class="single-feedback-box" *ngFor="let Content of singleFeedback;">
                 <div class="feedback-content-wrapper">
                     <div class="feedback-text-section">
-                        <p>{{Content.paragraph}}</p>
+                        <p [innerHTML]="Content.paragraph"></p>
                         <div class="title">
                             <h3>{{Content.userName}}</h3>
                             <span>{{Content.userDesignation}}</span>

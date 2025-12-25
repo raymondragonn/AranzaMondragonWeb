@@ -19,8 +19,15 @@ export class AboutComponent implements OnInit {
     ]
     showModal = false;
     originalParagraphs = [
-        "Soy Aranza Mondragón, entrenadora personal certificada especializada en transformación física para mujeres. Mi pasión por el fitness comenzó durante la pandemia, cuando descubrí el poder transformador del entrenamiento y la nutrición balanceada.",
-        "Hoy, me dedico a ayudar a mujeres a alcanzar sus objetivos físicos de manera sostenible, sin dietas extremas ni rutinas imposibles. Mi enfoque se centra en el crecimiento de glúteos, definición abdominal y, sobre todo, en aumentar la confianza y autoestima de mis asesoradas."
+        "Soy <strong>coach nutricional y de entrenamiento</strong> especializada en mujeres y <strong>psicóloga</strong>, pero poco más... Soy una mujer que también ha pasado por muchas etapas de inseguridad en su cuerpo. Especialmente en la adolescencia, no recuerdo momentos donde me sintiera cómoda con mi cuerpo.",
+        "Hasta que a mis 16 años, durante la pandemia, comencé a hacer del ejercicio y me encantó. Me enfoqué tanto en \"verme tonificada\" que caí en el extremo:",
+        "• Ejercitarme diario y sentir culpa si faltaba",
+        "• No comer comida de mi abuela",
+        "• Comer ensaladas en vez de lo que había de comer porque tenían menos calorías y era más \"saludable\". Incluso dejando de probar pastel en mi cumpleaños.",
+        "Y a pesar de ello, estaba dispuesta a seguir así hasta que... <strong>perdí mi periodo</strong>.",
+        "Todo cambió. Comencé a investigar y conocer más, y con el paso del tiempo, empecé a enamorarme del entrenamiento y la nutrición PERO con un enfoque ahora orientado a lo <strong>sostenible, real y efectivo</strong>.",
+        "Y un día me pregunté: ¿Por qué no dedicarme a mi pasión ayudando a otras mujeres que busquen recuperar su comodidad sin que tengan que cometer los mismos errores?",
+        "Y así creé <strong>The Confidence Method</strong>, un programa online dedicado a ayudar personalmente a mujeres a lograrlo <strong>sin pasar horas interminables en el gym</strong> y <strong>comiendo rico y flexible</strong>."
     ];
 
     openModal(): void {
@@ -33,10 +40,13 @@ export class AboutComponent implements OnInit {
 
     aboutContent = [
         {
-            title: 'Conoce a tu Entrenadora',
+            title: 'Sobre mí',
             paragraphList: [
                 {
-                    paragraph: "Desde el inicio de la pandemia, busqué mantenerme activa y saludable. Poco a poco, me enamoré del mundo fitness y decidí prepararme profesionalmente para ayudar a otras personas a lograr sus objetivos, compartiendo mis conocimientos y pasión por el entrenamiento y la nutrición.",
+                    paragraph: "Soy <strong>coach nutricional y de entrenamiento</strong> especializada en mujeres y <strong>psicóloga</strong>. Pero más allá de mis credenciales, soy una mujer que también ha pasado por inseguridades corporales y errores extremos en el fitness.",
+                },
+                {
+                    paragraph: "He vivido los extremos: desde ejercitarme diario con culpa y dejar de comer pastel en mi cumpleaños, hasta <strong>perder mi periodo</strong>. Hoy, he encontrado un enfoque <strong>sostenible y real</strong> que quiero compartir contigo.",
                 }
             ],
             featuresList: [
