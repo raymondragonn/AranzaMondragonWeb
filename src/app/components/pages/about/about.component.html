@@ -32,7 +32,7 @@
                 <div class="about-content about-text-mobile" *ngFor="let Content of aboutContent;">
                     <p *ngFor="let pList of Content.paragraphList">{{pList.paragraph}}</p>
                     <button class="about-read-more-btn" (click)="openModal()">Ver más</button>
-                    <div class="about-checklist">
+                    <div class="about-checklist d-none d-lg-block">
                         <p>Si tú quieres:</p>
                         <p>✅ Disminuir grasa abdominal sin rebotes</p>
                         <p>✅ Verte y sentirte más cómoda en tu ropa</p>

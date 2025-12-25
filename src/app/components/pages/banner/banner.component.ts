@@ -23,7 +23,7 @@ export class BannerComponent implements OnInit {
                 }
             ],
             buttonText: '¡Quiero transformar mi cuerpo!',
-            buttonLink: 'https://api.whatsapp.com/send/?phone=522294485585&text=Hola%20Aranza,%20me%20interesa%20tu%20asesoría%20personalizada'
+            buttonLink: '#contact'
         }
     ];
     bannerImage = [

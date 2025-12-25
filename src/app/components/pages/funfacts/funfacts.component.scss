@@ -10,10 +10,9 @@
 .fun-facts-row {
     margin: 0;
     width: 100%;
-    gap: 2px;
     
-    > .col {
-        padding: 0 1px;
+    > [class*="col"] {
+        padding: 1px;
     }
 }
 .single-fun-fact {
@@ -89,6 +88,16 @@
 
 /* Max width 767px */
 @media only screen and (max-width: 767px) {
+    .fun-facts-row {
+        > [class*="col"] {
+            padding: 1px;
+            margin-bottom: 2px;
+            
+            &:nth-child(2n) {
+                padding-left: 1px;
+            }
+        }
+    }
 
     .single-fun-fact {
         padding: 12px 15px;

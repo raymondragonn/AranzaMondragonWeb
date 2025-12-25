@@ -17,6 +17,7 @@
                     <a [href]="navItem.isLink ? navItem.id : '#' + navItem.id" 
                        [target]="navItem.isLink ? '_blank' : null" 
                        [rel]="navItem.isLink ? 'noopener' : null"
+                       (click)="!navItem.isLink && handleNavClick($event, navItem.id)"
                        class="nav-link">{{navItem.title}}</a>
                 </li>
             </ul>

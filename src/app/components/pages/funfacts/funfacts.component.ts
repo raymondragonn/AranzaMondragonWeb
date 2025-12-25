@@ -15,7 +15,7 @@ export class FunfactsComponent implements OnInit {
     funFacts: Content[] = [
         {
             icon: 'las la-users',
-            title: '1000+',
+            title: '200+',
             subTitle: 'Mujeres Transformadas'
         },
         {
